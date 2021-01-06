@@ -1,4 +1,4 @@
-# Dino Game 
+# Dino Game by Gabriel Espinhara
 
 Neste repositório fiz algumas alterações seguindo o tutorial da, **_DIO_**: **Recriando o famoso jogo do dinossauro sem internet**
 
@@ -50,6 +50,20 @@ Neste repositório fiz algumas alterações seguindo o tutorial da, **_DIO_**: *
           }
       }
       ```
-- Tela de **Game Over** com **_retry again_**:
+- Tela de **Game Over** com **_retry again game_**:
 
   - Ao perder o usuário pode voltar clicando na **_seta para cima_** , no **_space_** ou no **botão** ao meio da tela.
+    - ```js 
+        isOver = true //aqui passa a ser o fim de jogo
+        function handleKeysGameOver(event) {
+            //ao clicar ma seta para cima, no space ou no botão ao meio da tela reinicia o game
+            event.keyCode === 32 || event.keyCode === 38 ? refresh() : ''
+        }
+      document.addEventListener('keyup', handleKeysGameOver)//observar o keyup das teclas
+      ```
+     - ```js 
+        //fUnção refresh
+        function refresh() {
+            window.location.reload()//da um reload na página
+        }
+        ```
