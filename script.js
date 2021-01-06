@@ -10,7 +10,6 @@ let isOver = false
 setScore(isOver)
 var interval = 0
 function setScore() {
-
     interval = setInterval(function () {
         if (!isOver) {
             var elapsedTime = Date.now() - startTime;
@@ -20,11 +19,7 @@ function setScore() {
             clearInterval(interval)
             document.querySelector(".score").innerHTML = 'Score: ' + count;
         }
-
     }, 100);
-
-
-
 }
 function handleKeyUp(event) {
     if (event.keyCode === 32) {
@@ -35,16 +30,6 @@ function handleKeyUp(event) {
         console.log('Your press up ')
         !isJumping ? jump() : ''
     }
-    // if(event.keyCode === 40){
-    //     down()
-    // }
-}
-function down() {
-    let downInterval = setInterval(() => {
-        position -= 20
-        dino.style.bottom = position + 'px'
-
-    }, 5)
 }
 function jump() {
     isJumping = true
