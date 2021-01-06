@@ -67,7 +67,7 @@ function creteCactus() {
                 if (cactusPosition <= -64) {
                     clearInterval(moveInterval)
                     background.removeChild(cactus)
-                } else if (cactusPosition > 0 && cactusPosition < 74 && position < 64) {
+                } else if (cactusPosition > 0 && cactusPosition < 64 && position < 64) {
                     clearInterval(moveInterval)
                     document.body.innerHTML = `
                         <div class="score" >Score: ${count}</div>
@@ -77,7 +77,6 @@ function creteCactus() {
                         </div>
                     `
                     isOver = true
-                    localStorage.setItem('isOver', isOver)
                     function handleKeysGameOver(event) {
                         event.keyCode === 32 || event.keyCode === 38 ? refresh() : ''
                     }
