@@ -1,0 +1,65 @@
+body{
+    background: #fafafa;
+    width: 100%;
+    height: 100%;
+}
+
+.center .continue{
+    background-image: url('./assets/continue.png');
+    position: absolute;
+    width: 70px;
+    height: 66px;
+}
+.center {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
+.dino{
+    width: 60px;
+    height: 60px;
+    background-image: url('./assets/dino.png');
+    position: absolute;
+    bottom: 20px;
+}
+.score{
+    position: absolute;
+    top: 10px;
+    right: 10px; 
+}
+.cactus{
+    width: 60px;
+    height: 60px;
+    background-image: url('./assets/cactus.png');
+    position: absolute;
+    bottom: 20px;
+}
+
+.game-over{
+    text-align: center;
+    color: #666666;
+    margin-top: 50px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+@keyframes sliderRight{
+    from {
+        background-position: 70000%;
+    }
+    to{
+        background-position: 0;
+    }
+}
+
+.background{
+    position: absolute;
+    bottom: 24px;
+    background-image: url('./assets/background.png');
+    background-repeat: repeat-x;
+    animation: sliderRight 600s infinite linear;
+    width: 100%;
+    height: 230px;
+}
