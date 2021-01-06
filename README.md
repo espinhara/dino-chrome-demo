@@ -67,3 +67,4 @@ Neste repositório fiz algumas alterações seguindo o tutorial da, **_DIO_**: *
             window.location.reload()//da um reload na página
         }
         ```
+    Por favor melhorem o meu código, conto com vocês
